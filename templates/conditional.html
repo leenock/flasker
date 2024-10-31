@@ -1,0 +1,12 @@
+{% extends 'base2.html' %}
+
+{% block title %}Conditional{% endblock %}
+
+{% block content %}
+    <h1>Conditional content</h1>
+    {% if condition %}
+        <p>Condition is true</p>
+    {% else %}
+        <p>Condition is false</p>
+    {% endif %}
+{% endblock %}

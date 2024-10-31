@@ -1,0 +1,30 @@
+<form method="POST" action="/update">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.name.label }}
+        {{ form.name }}
+    </p>
+
+    {% if form.name.errors %}
+        <ul class="errors">
+            {% for error in form.name.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <p>
+        {{ form.age.label }}
+        {{ form.age }}
+    </p>
+
+    {% if form.age.errors %}
+        <ul class="errors">
+            {% for error in form.age.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <input type="submit" value="Update">
+</form>
